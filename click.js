@@ -1,4 +1,4 @@
-let clicks = 10000000;
+let clicks = 0;
 let clickValue = 1;
 let clickValueMultiplier = 1;
 let passiveIncome = 0;
