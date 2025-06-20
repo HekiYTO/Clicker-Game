@@ -10,16 +10,20 @@ main {
     display: flex;
 }
 
+h2 {
+    text-align: center;
+}
+
 .click-section {
     background-color: rgb(90, 90, 90);
     width: 40%;
-    height: 100vh;
+    height: 100%;
 }
 
 .upgrade-section {
     background-color: rgb(35, 35, 35);
     width: 60%;
-    height: 100vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: end;
@@ -88,11 +92,10 @@ main {
     flex-direction: column;
 }
 
-
     .click-section {
     padding-bottom: 5vh;
     background-color: rgb(90, 90, 90);
-    height: 40%;
+    height: 80vh;
     width: 100%;
 }
 
@@ -102,8 +105,15 @@ main {
     width: 100%;
 }
 
+.upgrades {
+    margin: 4% auto 0;
+    align-items: center;
+}
+
 .contu {
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
 }
     
