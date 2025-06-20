@@ -25,6 +25,7 @@ h2 {
     background-color: rgb(35, 35, 35);
     width: 60%;
    min-height: 100vh;
+   height: 100%;
     display: flex;
     flex-direction: column;
     align-items: end;
