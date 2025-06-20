@@ -16,9 +16,12 @@ h2 {
 }
 
 .click-section {
+    display: fixed;
+    position: sticky;
+    top: 0;
     background-color: rgb(90, 90, 90);
     width: 40%;
-    min-height: 100vh;
+    max-height: 100vh;
 }
 
 .upgrade-section {
@@ -29,7 +32,6 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: end;
-    padding-bottom: 10vh;
 }
 
 .click-section {
@@ -99,16 +101,18 @@ h2 {
 }
 
     .click-section {
+    position:static;
     padding-bottom: 5vh;
     background-color: rgb(90, 90, 90);
     height: 80vh;
-    width: 100%;
+    width: 100vw;
 }
 
 .upgrade-section {
     background-color: rgb(35, 35, 35);
-    height: 100vh;
-    width: 100%;
+    height: 120vh;
+    width: 100vw;
+    padding-bottom: 10vh;
 }
 
 .upgrades {
@@ -123,4 +127,19 @@ h2 {
     flex-direction: column;
 }
     
+}
+
+@media  screen and (min-width: 1440px) {
+    body {
+        font-size: 50px;
+    }
+
+    .main-button {
+        width: 400px;
+        height: 400px;
+    }
+
+    .button {
+        font-size: 50px;
+    }
 }
