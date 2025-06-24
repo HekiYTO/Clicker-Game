@@ -32,6 +32,7 @@ let lpit4 = document.querySelector('.lpit4');
 let bpit1C = 5;
 let bpit2C = 25;
 let bpit3C = 100;
+let bpit4C = 1000;
 
 let IVCM = 3;
 function upgradeBI() {
