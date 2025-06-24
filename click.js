@@ -1,3 +1,5 @@
+/* Чувак это репчик, киррил не лезь сюда а то по морде дам */
+
 let clicks = 0;
 let clickValue = 1;
 let clickValueMultiplier = 1;
@@ -11,6 +13,7 @@ let buttonPassiveIncomeSpeed = document.querySelector('.button-passive-income-sp
 let buttonPassiveIncomet1 = document.querySelector('.button-passive-income-type-1');
 let buttonPassiveIncomet2 = document.querySelector('.button-passive-income-type-2');
 let buttonPassiveIncomet3 = document.querySelector('.button-passive-income-type-3');
+let buttonPassiveIncomet4 = document.querySelector('.button-passive-income-type-4');
 let piCounter = document.querySelector('.passive-income')
 let lci = document.querySelector('.lci');
 let lcim = document.querySelector('.lcim');
@@ -23,8 +26,9 @@ let bpisC = 100;
 let lpit1 = document.querySelector('.lpit1');
 let lpit2 = document.querySelector('.lpit2');
 let lpit3 = document.querySelector('.lpit3');
+let lpit4 = document.querySelector('.lpit4');
 
-
+/*Ну и шо тебе не нравится то?*/
 let bpit1C = 5;
 let bpit2C = 25;
 let bpit3C = 100;
@@ -96,7 +100,7 @@ let PICMT1 = 2;
 function upgradePIt1() {
     if (bpit1C <= clicks) {
         clicks = clicks - bpit1C;
-        
+        /*Я знаю что мог бы написать clicks -= bpti1c но мне лень*/
         bpit1C = Math.round(bpit1C * PICMT1)
         if (PICMT1 >= 1.1) {
             PICMT1 -= 0.1;
@@ -134,13 +138,30 @@ function upgradePIt3() {
             PICMT3 -= 0.1;
         }
         passiveIncome += 7;
-        lpit3.innerHTML = `<label class="lpit2"  for="">Buy PrivatBank stock: ${bpit3C}$</label>`;
+        lpit3.innerHTML = `<label class="lpit3"  for="">Buy PrivatBank stock: ${bpit3C}$</label>`;
         console.log(`PIt3 is ${bpit3C} now`);
         updateCounter();
         updatePICounter()
     }
 }
 
+let PICMT4 = 2;
+function upgradePIt4() {
+    if (bpit4C <= clicks) {
+        clicks = clicks - bpit4C;
+        bpit4C = Math.round(bpit4C * PICMT4)
+        if (PICMT4 >= 1.1) {
+            PICMT4 -= 0.1;
+        }
+        passiveIncome += 30;
+        lpit4.innerHTML = `<label class="lpit4"  for="">Buy one АТБ Маркет: ${bpit4C}$</label>`;
+        console.log(`PIt4 is ${bpit4C} now`);
+        updateCounter();
+        updatePICounter()
+    }
+}
+
+/* Ну давай скажи что тут нихерна не правильно, мы же в факторио игарем да? Тогда переделывай */
 
 function clicked() {
     clicks += clickValue * clickValueMultiplier;
@@ -162,6 +183,7 @@ buttonIncomeMultiplier.addEventListener('click', upgradeBIM);
 buttonPassiveIncomet1.addEventListener('click', upgradePIt1);
 buttonPassiveIncomet2.addEventListener('click', upgradePIt2);
 buttonPassiveIncomet3.addEventListener('click', upgradePIt3);
+buttonPassiveIncomet4.addEventListener('click', upgradePIt4);
 buttonPassiveIncomeSpeed.addEventListener('click', upgradePIS);
 
 setInterval(() => {
